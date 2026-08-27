@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  @apply bg-[#F5F6F8] text-graphite-950 antialiased;
+}
+
+/* Foco visivel para acessibilidade de teclado em toda a aplicacao */
+:focus-visible {
+  outline: 2px solid #3A8677;
+  outline-offset: 2px;
+}
+
+@layer components {
+  .campo-input {
+    @apply w-full rounded-md border border-graphite-700/15 bg-white px-3 py-2 text-sm text-graphite-950
+      outline-none transition focus:border-pine-500;
+  }
+  .botao-secundario {
+    @apply rounded-md border border-graphite-700/15 bg-white px-3 text-sm text-graphite-700
+      transition hover:border-pine-500 hover:text-pine-600;
+  }
+  .botao-primario {
+    @apply rounded-md bg-pine-600 px-4 py-2 text-sm font-medium text-white transition
+      hover:bg-pine-500 disabled:opacity-50;
+  }
+}
