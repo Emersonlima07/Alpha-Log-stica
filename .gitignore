@@ -18,3 +18,5 @@ frontend/.env.local
 # Geral
 .DS_Store
 *.log
+# Dados locais da ferramenta de estoque/vendas
+ferramentas/estoque_vendas.json
